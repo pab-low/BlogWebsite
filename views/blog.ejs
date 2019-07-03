@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="mt-5">
+     <div class="container mx-auto">
+        <h1 class="text-center" >Blog Center</h1>
+        <form action="/blog" method="POST" class="mt-0">
+            <input class="form-control form-control-lg" type="text" name="task" placeholder="Add Blog ..." required>
+            <button type="submit" class="btn btn-primary btn-lg mt-1 mb-5 btn-block">Add Blog</button>
+        </form>
+        <form action="/blog" method="SEARCH" class="mt-0">
+            <input type="text" id="mySearch" onkeyup= search() placeholder="Search.." title="Type in a category">
+            <button type="submit" class="btn btn-primary btn-lg mt-1 mb-5 btn-block">Search Blog</button>
+        </form>
+        <h4>Blogs</h4>
+        <ul id="blogMenu" class="list-group list-group-flush mt-5 text-light scrollingDiv">
+            <% for ( let i=0; i < taskToDo.length;  i++ ){%>
+                <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].taskItem %></li>
+            <% } %>
+        </ul>
+    </div>
+    <script src="/js/main.js"></script>
+    <!-- <script>
+  function search(){
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("blogMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+};
+    </script> -->
+</body>
+</html> 

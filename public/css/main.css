@@ -1,0 +1,32 @@
+body {
+    background-color: #000000;
+}
+
+h1 {
+    -webkit-text-fill-color: white;
+}
+h4 {
+    -webkit-text-fill-color: white;
+}
+
+.btn {
+    background-color: #999999;
+    -webkit-text-fill-color: black;
+}
+
+
+.list-group-item {
+    background-color: #999999;
+    -webkit-text-fill-color: black;
+}
+li:hover {
+    text-decoration: line-through;
+    background: white;
+    cursor: pointer;
+    }
+
+ul.scrollingDiv{
+    height:120px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
