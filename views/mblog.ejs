@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
-     <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-             <div id="myDropdown" class="dropdown-content">
-                <a href="#">Week 1</a>
-                <a href="#">Week 2</a>
-               <a href="#">Week 3</a>
-              </div>
-        </div>
+<body class="mt-5">
+     <div class="text-center container mx-auto">
+        <h1 class="text-center" >Creating A Blog</h1>
+         <form action="/blog" method="POST" class="mt-0">
+             <input class="form-control form-control-lg" type="text" name="task" placeholder="Add Title Here" required><br>
+         <form action="/blog" method="SEARCH" class="mt-0">
+             <input class="form-control form-control-lg" type="text" name="task" placeholder="Add Blog ..." required>
+             <button type="submit" class="btn btn-primary btn-lg mt-1 mb-5 btn-block">Submit Blog</button>
+         </form>    
+            
+     </div>
 </body>
 </html>
