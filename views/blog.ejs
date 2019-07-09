@@ -19,29 +19,13 @@
         <h4>Blogs</h4>
         <ul id="blogMenu" class="list-group list-group-flush mt-5 text-light scrollingDiv">
             <% for ( let i=0; i < taskToDo.length;  i++ ){%>
-               <a href="/views/mblog.ejs"></a>
-                <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].taskItem %></li>
+               <!-- <a href="/views/mblog.ejs"></a> -->
+                <li class="list-group-item" id="<%= taskToDo[i].id %>" ><%= taskToDo[i].title %></li>
             <% } %>
             
         </ul>
     </div>
     <script src="/js/main.js"></script>
-    <!-- <script>
-  function search(){
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("mySearch");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("blogMenu");
-  li = ul.getElementsByTagName("li");
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-};
-    </script> -->
+
 </body>
 </html> 
