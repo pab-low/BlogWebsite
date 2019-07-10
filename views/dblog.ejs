@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="mt-5">
+     <div class="container mx-auto">
+        <h2 id="blogMenu" class="text-center list-group list-group-flush mt-5 text-light" >
+            <% for ( let i=0; i < taskToDo.length;  i++ ){%>
+                <li class="list-group-item" id="<%= taskToDo[i].id %>" ><%= taskToDo[i].title %></li>
+            <% } %>
+        </h2>
+        <br>
+        <h2 class="row col-14 text-truncate">
+            <% for ( let i=0; i < taskToDo.length;  i++ ){%>
+                <li class="list-group-item" id="<%= taskToDo[i].id %>" ><%= taskToDo[i].body %></li>
+            <% } %>
+        </h2>
+
+
+          <a href="/">
+            <button type="submit" class="text-center btn btn-primary btn-lg mt-1 mb-5 btn-block">Back</button>
+          </a>
+    </div>
+    <script src="/js/main.js"></script>
+
+</body>
+</html> 

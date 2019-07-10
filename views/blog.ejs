@@ -18,11 +18,10 @@
         </form>
         <h4>Blogs</h4>
         <ul id="blogMenu" class="list-group list-group-flush mt-5 text-light scrollingDiv">
-            <% for ( let i=0; i < taskToDo.length;  i++ ){%>
-               <!-- <a href="/views/mblog.ejs"></a> -->
-                <li class="list-group-item" id="<%= taskToDo[i].id %>" ><%= taskToDo[i].title %></li>
-            <% } %>
-            
+                    <% for ( let i=0; i < taskToDo.length;  i++ ){%>
+                        <li class="list-group-item" id="<%= taskToDo[i].id %>" ><a href="/dblog/<%= taskToDo[i].ID %>"><%= taskToDo[i].title %></a></li>
+                    <% } %>
+                
         </ul>
     </div>
     <script src="/js/main.js"></script>

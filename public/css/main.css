@@ -20,7 +20,6 @@ h4 {
     -webkit-text-fill-color: black;
 }
 li:hover {
-    text-decoration: line-through;
     background: white;
     cursor: pointer;
     }

@@ -1,9 +1,8 @@
 // variables
-const express = require('express')
+const express    = require('express')
 const bodyParser = require('body-parser')
-const app = express();
+const app        = express();
 const urlEncoded = bodyParser.urlencoded({extended: false})
-const dummyData = [{taskItem: "Week 1" },{taskItem: "Week 2"},{taskItem: "Week 3"}];
 const mysql      = require('mysql');
 
 const db = mysql.createConnection({
@@ -40,10 +39,15 @@ app.get('/', (req, res) => {
 });
 
 
-
+app.get('/dblog/:id', (req, res) => {
+    let sql = 'SELECT * FROM profile WHERE ID =' + req.params.id;
+    db.query(sql, function (err, results) {
+        if (err) throw err;
+        res.render('dblog', {taskToDo: results});
+    }); 
+});
 
 app.get('/mblog', (req, res) => {
-
     res.render('mblog');
 });
 
@@ -63,8 +67,6 @@ app.post('/blog', urlEncoded, (req, res) => {
          res.redirect('/')
         });
 });
-
-
 
 
 
